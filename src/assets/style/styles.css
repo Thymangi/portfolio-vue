@@ -1,0 +1,36 @@
+body {
+  font-family: "Your Chosen Font", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    #0000ff,
+    #8a2be2
+  ); /* De bleu à violet */
+  color: #333;
+}
+
+header,
+footer {
+  background-color: #8ea2bb;
+}
+
+section {
+  padding: 2rem;
+}
+
+a {
+  color: #1e90ff;
+}
+
+button {
+  background-color: #002b5b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e90ff;
+}
