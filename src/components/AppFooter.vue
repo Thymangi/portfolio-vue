@@ -60,12 +60,12 @@ export default {
 }
 
 .github-icon {
-  width: 20px; /* Reduced size for GitHub icon */
+  width: 20px; /* réduction de la taille de l'icone GitHub */
   height: 20px;
 }
 .social-icons img:hover {
-  transform: scale(1.2); /* Scale the icon */
-  filter: brightness(1.2); /* Increase brightness */
+  transform: scale(1.2); /* mettre à l'échelle l'icone */
+  filter: brightness(1.2); /* ajouter de la brillance */
 }
 
 .footer-text {

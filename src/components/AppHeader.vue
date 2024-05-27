@@ -3,7 +3,7 @@
   <header>
     <div class="logo-container">
       <img
-        src="@/assets/logo.png"
+        src="@/assets/logoCarcar.png"
         alt="Logo"
         @click="scrollToTop"
         class="logo"
@@ -46,8 +46,8 @@ export default {
 <style scoped>
 header {
   display: flex;
-  justify-content: flex-start; /* Align items to right */
-  align-items: center; /* Center vertically */
+  justify-content: flex-start; /* Aligner les items à droite */
+  align-items: center; /* centrer verticalement */
   padding: 1rem;
   background-color: #7d5bf7;
   color: #fff;
@@ -65,31 +65,31 @@ header {
 
 .logo {
   cursor: pointer;
-  height: 40px; /* Adjust the size of the logo */
-  margin-right: 2rem; /* Add some space between the logo and the navigation */
+  height: 40px; /* ajuster la taille du logo */
+  margin-right: 2rem; /* ajouter de l'espace entre le logo et la nav */
 }
 
 nav {
   display: flex;
-  align-items: center; /* Center vertically within the nav */
+  align-items: center; /* centre verticalement les éléments de la nav */
 }
 
 nav ul {
   display: flex;
-  align-items: center; /* Center vertically within the ul */
+  align-items: center; /* Centrer verticalement dans l'ul */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  margin-left: 2rem; /* Add some space between the links */
+  margin-left: 2rem; /* Ajoutez de l'espace entre les liens */
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem; /* Adjust the font size for better readability */
+  font-size: 1rem; /* ajuster la taille de la font  */
 }
 
 nav ul li a:hover,

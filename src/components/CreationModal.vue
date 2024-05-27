@@ -42,7 +42,7 @@ export default {
   padding: 2rem;
   border-radius: 10px;
   position: relative;
-  color: black; /* Text color is black */
+  color: black; /* couleur du texte black */
 }
 .close {
   position: absolute;

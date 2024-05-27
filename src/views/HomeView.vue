@@ -6,8 +6,9 @@
         <h2>CARCAR</h2>
         <p>
           CARCAR est spécialisé dans la formation et la prévention du risque
-          routier. <br />Nous travaillons auprès des usagers automobiles, deux
-          roues, poids lourds et des piétons.
+          routier. <br />Nous travaillons auprès des différents usagers: les
+          automobilistes, les conducteurs de deux roues, de poids lourds et les
+          piétons.
         </p>
         <p></p>
         <div class="usagers">
@@ -53,6 +54,7 @@
       </div>
     </section>
     <section id="creations">
+      <!-- Création 1 et 3 avec lien gitHub -->
       <h2>Mes Créations</h2>
       <div class="creations">
         <div class="creation" v-for="creation in creations" :key="creation.id">
@@ -64,6 +66,10 @@
           />
           <h3>{{ creation.title }}</h3>
         </div>
+      </div>
+      <div class="creation">
+        <!-- Création 2 avec lien pdf -->
+        <a href="cahier_des_charges_cef2024.pdf" target="_blank"> </a>
       </div>
       <CreationModal
         :visible="modalVisible"
@@ -104,12 +110,11 @@ export default {
         },
         {
           id: 2,
-          image: require("../assets/cv_cef2.png"),
-          title: "Création 2",
+          image: require("../assets/cahierDesCharges.png"),
+          title: "Cahier des charges",
           date: "2023-01-01",
-          technologies: "React, JavaScript",
+          technologies: "pdf",
           link: "https://example.com/creation2",
-          repo: "https://github.com/your-profile/creation2",
         },
         {
           id: 3,
@@ -169,35 +174,35 @@ section {
 .presentation {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  text-align: center; /* Center text */
-  margin-top: 2rem; /* Add some margin on top */
-  min-height: 100vh; /* Ensure the section takes at least the full height of the viewport */
+  align-items: center; /* Center horizontalement */
+  justify-content: center; /* Centrer le content verticalement */
+  text-align: center; /* Centrer le text */
+  margin-top: 2rem; /* ajouter de la marge au-dessus */
+  min-height: 100vh; /* Assurer que la section occupe au moins toute la hauteur de la fenêtre */
 }
 .presentation-content {
-  margin-top: 1rem; /* Reduce the margin at the top */
-  margin-bottom: auto; /* Center the content vertically */
-  max-width: 800px; /* Optionally limit the width of the content */
+  margin-top: 1rem; /* Reduire la marge au-dessus */
+  margin-bottom: auto; /* Centrer le content verticalement */
+  max-width: 800px; /* Limiter la largeur du contenu */
 }
 
 .usagers {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 2rem; /* Space between images */
-  margin-top: 2rem; /* Add some margin on top */
+  gap: 2rem; /* espace entre les images */
+  margin-top: 2rem; /* ajouter de la marge au-dessus */
 }
 
 .usager-image {
-  width: 100px; /* Adjust the size of the images */
+  width: 100px; /* ajuster la taille de l'image */
   height: auto;
 }
 .complement {
   display: flex;
   justify-content: center;
-  margin-top: 2rem; /* Add some margin on top */
-  text-align: center; /* Center text */
+  margin-top: 2rem; /* ajouter de la marge au-dessus */
+  text-align: center; /* Centrer le texte */
 }
 .creations {
   display: flex;
@@ -221,7 +226,7 @@ section {
 
 .creation-image:hover {
   box-shadow: 0 8px 16px rgba(241, 225, 225, 0.4);
-  cursor: pointer; /* Change cursor on hover */
+  cursor: pointer; /* Changer le  curseur au survol */
 }
 
 .creation h3 {
@@ -252,7 +257,7 @@ section {
 
 .back-to-top {
   position: fixed;
-  bottom: 80px; /* Adjusted to be above the footer */
+  bottom: 80px; /* Ajusté pour être au-dessus du pied de page */
   right: 20px;
   padding: 10px 20px;
   background-color: #333;
