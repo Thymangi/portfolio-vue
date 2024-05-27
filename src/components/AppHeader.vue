@@ -12,12 +12,14 @@
     <nav>
       <ul>
         <li>
-          <a href="#presentation" @click="scrollToSection('presentation')"
+          <a
+            href="#presentation"
+            @click.prevent="scrollToSection('presentation')"
             >Présentation</a
           >
         </li>
         <li>
-          <a href="#creations" @click="scrollToSection('creations')"
+          <a href="#creations" @click.prevent="scrollToSection('creations')"
             >Créations</a
           >
         </li>
@@ -54,7 +56,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 500; /* assurer que le header est au-dessus de contenu mais en dessous du modal */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 

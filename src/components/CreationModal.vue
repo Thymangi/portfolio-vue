@@ -75,6 +75,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000; /* Assurer que le modal est au-dessus des autres éléments */
 }
 
 .modal-content {
@@ -82,8 +83,9 @@ export default {
   padding: 20px;
   border-radius: 10px;
   position: relative;
-  max-width: 500px;
+  max-width: 600px;
   width: 90%;
+  height: auto; /* ajuste la hauteur au besoin */
 }
 
 .close-button {
