@@ -67,7 +67,6 @@ export default {
   transform: scale(1.2); /* mettre à l'échelle l'icone */
   filter: brightness(1.2); /* ajouter de la brillance */
 }
-
 .footer-text {
   font-size: 0.9rem;
 }

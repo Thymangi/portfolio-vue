@@ -10,7 +10,11 @@
           class="carousel-item"
           :class="{ active: index === activeIndex }"
         >
-          <img :src="image" :alt="'Image ' + (index + 1)" />
+          <img
+            :src="image"
+            :alt="'Image ' + (index + 1)"
+            class="carousel-image"
+          />
         </div>
         <button class="carousel-control prev" @click="prevImage">‹</button>
         <button class="carousel-control next" @click="nextImage">›</button>
@@ -83,9 +87,13 @@ export default {
   padding: 20px;
   border-radius: 10px;
   position: relative;
-  max-width: 600px;
+  max-width: 800px;
   width: 90%;
-  height: auto; /* ajuste la hauteur au besoin */
+  height: 90vh; /* ajuste la hauteur du modal à l'écran */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Activer le défilement pour le contenu modal */
 }
 
 .close-button {
@@ -102,6 +110,7 @@ export default {
   position: relative;
   width: 100%;
   margin-bottom: 1rem;
+  height: calc(100% - 180px); /* Ajuste la hauteur */
 }
 
 .carousel-item {
@@ -111,6 +120,12 @@ export default {
 
 .carousel-item.active {
   display: block;
+}
+.carousel-image {
+  width: 80%;
+  height: 60%;
+  max-height: 100vh; /* Ajuster la hauteur selon vos besoins */
+  object-fit: contain; /* Garantit que l'image couvre le conteneur */
 }
 
 .carousel-control {
