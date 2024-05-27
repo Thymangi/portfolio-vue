@@ -108,9 +108,9 @@ export default {
           link: "https://example.com/creation1",
           repo: "https://github.com/your-profile/creation1",
           images: [
-            require("@/assets/creationCv_1.jpg"),
-            require("@/assets/creationCv_2.jpg"),
-            require("@/assets/creationCv_3.jpg"),
+            require("@/assets/cv_cef.png"),
+            require("@/assets/cv_cef2.png"),
+            require("@/assets/cv_cef3.png"),
           ],
         },
         {
@@ -119,26 +119,26 @@ export default {
           title: "Cahier des charges",
           date: "2023-01-01",
           technologies: "pdf",
-          link: "/pdf/creation2.pdf", // PDF lien
+          link: "../assets/cahier_des_charges_cef2024.pdf", // PDF lien
           repo: "https://github.com/example/repo2", //n'existe pas mis par défaut
           images: [
-            require("@/assets/creationCdc_1.jpg"),
-            require("@/assets/creationCdc_2.jpg"),
-            require("@/assets/creationCdc_3.jpg"),
+            require("@/assets/cahierDesCharges.png"),
+            require("@/assets/cahierDesCharges2.png"),
+            require("@/assets/cahierDesCharges3.png"),
           ],
         },
         {
           id: 3,
-          image: require("../assets/DynaSite.png"), // projet le dynamisme d'un site
+          image: require("../assets/dynaSite.png"), // projet le dynamisme d'un site
           title: "Dynamisme d'un Site",
           date: "2024-01-01",
           technologies: "CSS, TypeScript",
           link: "https://example.com/creation3",
           repo: "https://github.com/your-profile/creation3",
           images: [
-            require("@/assets/creationDys_1.jpg"),
-            require("@/assets/creationDys_2.jpg"),
-            require("@/assets/creationDys_3.jpg"),
+            require("@/assets/dynaSite.png"),
+            require("@/assets/dynaSite2.png"),
+            require("@/assets/dynaSite3.png"),
           ],
         },
       ],
