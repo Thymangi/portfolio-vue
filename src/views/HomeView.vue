@@ -107,6 +107,11 @@ export default {
           technologies: "VueJS, HTML5, CSS3",
           link: "https://example.com/creation1",
           repo: "https://github.com/your-profile/creation1",
+          images: [
+            require("@/assets/creationCv_1.jpg"),
+            require("@/assets/creationCv_2.jpg"),
+            require("@/assets/creationCv_3.jpg"),
+          ],
         },
         {
           id: 2,
@@ -114,16 +119,27 @@ export default {
           title: "Cahier des charges",
           date: "2023-01-01",
           technologies: "pdf",
-          link: "https://example.com/creation2",
+          link: "/pdf/creation2.pdf", // PDF lien
+          repo: "https://github.com/example/repo2", //n'existe pas mis par défaut
+          images: [
+            require("@/assets/creationCdc_1.jpg"),
+            require("@/assets/creationCdc_2.jpg"),
+            require("@/assets/creationCdc_3.jpg"),
+          ],
         },
         {
           id: 3,
-          image: require("../assets/cv_cef3.png"),
-          title: "Création 3",
+          image: require("../assets/DynaSite.png"), // projet le dynamisme d'un site
+          title: "Dynamisme d'un Site",
           date: "2024-01-01",
-          technologies: "Angular, TypeScript",
+          technologies: "CSS, TypeScript",
           link: "https://example.com/creation3",
           repo: "https://github.com/your-profile/creation3",
+          images: [
+            require("@/assets/creationDys_1.jpg"),
+            require("@/assets/creationDys_2.jpg"),
+            require("@/assets/creationDys_3.jpg"),
+          ],
         },
       ],
       modalVisible: false,
@@ -138,9 +154,14 @@ export default {
     },
     closeModal() {
       this.modalVisible = false;
+      this.selectedCreation = {}; // fermetrue au clique vide
     },
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: "smooth" });
     },
     checkScroll() {
       this.showButton = window.scrollY > 200;
@@ -208,7 +229,8 @@ section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
+  justify-content: center;
+} /* div ensemble des création1 + créa2 + créa 3*/
 
 .creation {
   display: flex;
@@ -238,21 +260,7 @@ section {
 @media (max-width: 768px) {
   .creation-image {
     width: 90%;
-  }
-
-  .creation h3 {
-    font-size: 4vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .creation-image {
-    width: 100%;
-  }
-
-  .creation h3 {
-    font-size: 5vw;
-  }
+  } /* à définir ...*/
 }
 
 .back-to-top {
