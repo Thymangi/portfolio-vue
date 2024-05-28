@@ -69,7 +69,7 @@
       </div>
       <div class="creation">
         <!-- Création 2 avec lien pdf -->
-        <a href="cahier_des_charges_cef2024.pdf" target="_blank"> </a>
+        <a href="creation.link" target="_blank"> </a>
       </div>
       <CreationModal
         :visible="modalVisible"
@@ -106,7 +106,7 @@ export default {
           date: "2022-01-01",
           technologies: "VueJS, HTML5, CSS3",
           link: "https://example.com/creation1",
-          repo: "https://github.com/your-profile/creation1",
+          repo: "https://github.com/Thymangi/cef_cv_2024",
           images: [
             require("@/assets/cv_cef.png"),
             require("@/assets/cv_cef2.png"),
@@ -119,7 +119,7 @@ export default {
           title: "Cahier des charges",
           date: "2023-01-01",
           technologies: "pdf",
-          link: "../assets/cahier_des_charges_cef2024.pdf", // PDF lien
+          link: "/pdf/cahier_des_charges_cef2024.pdf", // PDF lien
           repo: "https://github.com/example/repo2", //n'existe pas mis par défaut
           images: [
             require("@/assets/cahierDesCharges.png"),
@@ -134,7 +134,7 @@ export default {
           date: "2024-01-01",
           technologies: "CSS, TypeScript",
           link: "https://example.com/creation3",
-          repo: "https://github.com/your-profile/creation3",
+          repo: "https://github.com/Thymangi/dynEspo",
           images: [
             require("@/assets/dynaSite.png"),
             require("@/assets/dynaSite2.png"),

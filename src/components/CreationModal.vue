@@ -19,18 +19,20 @@
         <button class="carousel-control prev" @click="prevImage">‹</button>
         <button class="carousel-control next" @click="nextImage">›</button>
       </div>
-      <p><strong>Date de création :</strong> {{ creation.date }}</p>
-      <p>
-        <strong>Technologies utilisées :</strong> {{ creation.technologies }}
-      </p>
-      <p v-if="creation.link">
-        <strong>Visitez le site ou fichier :</strong>
-        <a :href="creation.link" target="_blank">{{ creation.link }}</a>
-      </p>
-      <p v-if="creation.repo">
-        <strong>Repository GitHub :</strong>
-        <a :href="creation.repo" target="_blank">{{ creation.repo }}</a>
-      </p>
+      <div class="creation-details">
+        <p><strong>Date de création :</strong> {{ creation.date }}</p>
+        <p>
+          <strong>Technologies utilisées :</strong> {{ creation.technologies }}
+        </p>
+        <p v-if="creation.link">
+          <strong>Visitez le site ou fichier :</strong>
+          <a :href="getLink(creation.link)" target="_blank">Ouvrir le PDF</a>
+        </p>
+        <p v-if="creation.repo">
+          <strong>Repository GitHub :</strong>
+          <a :href="creation.repo" target="_blank">{{ creation.repo }}</a>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -63,6 +65,14 @@ export default {
     },
     nextImage() {
       this.activeIndex = (this.activeIndex + 1) % this.creation.images.length;
+    },
+    getLink(file) {
+      return this.isExternalLink(file)
+        ? file
+        : `${process.env.BASE_URL}${file}`;
+    },
+    isExternalLink(url) {
+      return /^(http|https):/.test(url);
     },
   },
 };
@@ -105,10 +115,35 @@ export default {
   font-size: 1.5rem;
   cursor: pointer;
 }
+h2 {
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
+.creation-details {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.creation-details p {
+  margin: 0.5rem 0;
+}
+
+.creation-details a {
+  color: #42b983;
+  text-decoration: none;
+}
 .carousel {
   position: relative;
   width: 100%;
+  margin-bottom: 1rem;
+  flex: 1; /* Faire en sorte que le carrousel occupe l'espace restant */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
   height: calc(100% - 180px); /* Ajuste la hauteur */
 }
@@ -116,15 +151,17 @@ export default {
 .carousel-item {
   display: none;
   text-align: center;
+  height: 100%; /* Garantir que l'iteme prend tout l'espace */
 }
 
 .carousel-item.active {
-  display: block;
+  display: flex; /* Utiliser flex pour centrer l'image */
+  justify-content: center;
+  align-items: center;
 }
 .carousel-image {
-  width: 80%;
-  height: 60%;
-  max-height: 100vh; /* Ajuster la hauteur selon vos besoins */
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain; /* Garantit que l'image couvre le conteneur */
 }
 
