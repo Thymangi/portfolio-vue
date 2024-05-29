@@ -71,6 +71,7 @@
         <!-- Création 2 avec lien pdf -->
         <a href="creation.link" target="_blank"> </a>
       </div>
+
       <CreationModal
         :visible="modalVisible"
         :creation="selectedCreation"
