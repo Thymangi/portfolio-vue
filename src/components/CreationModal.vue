@@ -26,7 +26,7 @@
         </p>
         <p v-if="creation.link">
           <strong>Visitez le site ou fichier :</strong>
-          <a :href="getLink(creation.link)" target="_blank">Ouvrir le PDF</a>
+          <a :href="creation.link" target="_blank">Ouvrir le PDF</a>
         </p>
         <p v-if="creation.repo">
           <strong>Repository GitHub :</strong>
