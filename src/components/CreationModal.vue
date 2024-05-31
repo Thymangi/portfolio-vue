@@ -28,6 +28,8 @@
           <strong>Visitez le site ou fichier :</strong>
           <a :href="creation.link" target="_blank">Ouvrir le PDF</a>
         </p>
+        <!-- le "getlink" à été retiré pour permettre l'ouverture du pdf: reco
+        CEF -->
         <p v-if="creation.repo">
           <strong>Repository GitHub :</strong>
           <a :href="creation.repo" target="_blank">{{ creation.repo }}</a>
